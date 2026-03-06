@@ -1,18 +1,20 @@
 body {
     background-color: #eff0f4;
     padding-top: 150px;
-    cursor: url("../CursorIcons/CursorIcon40x40.png"), auto;
 
 }
 
 /* Cursor */
+body, div, section, table, td, th, span, button, a {
+    cursor: url('../CursorIcons/CursorIcon40x40.png'), auto; 
+}
 a, button, .clickable {
-    cursor: url("../CursorIcons/pointer.png"), pointer;
+    cursor: url('../CursorIcons/pointer.png'), pointer;
 }
 
     /* Text inputs */
 input[type="text"], textarea {
-    cursor: url('../CursorIcons/text40x40.png'), text;
+    cursor: url('CursorIcons/text40x40.png'), text;
 }
 
 /* Nav Bar */

@@ -96,6 +96,12 @@ header {
   border-bottom: 1px solid #a1c181;
 }
 
+.experience-header:hover {
+    cursor: url('../CursorIcons/pointer.png'), pointer;
+    background:#003049;
+  color: #eff0f4;
+}
+
 /* Clickable header row */
 .experience-header {
   width: 100%;
@@ -113,8 +119,8 @@ header {
 }
 
 .experience-header:hover {
-  background:#003049;
-  color: #eff0f4;
+    cursor: url('../CursorIcons/pointer.png'), pointer;
+  
 }
 
 /* Column styles */
@@ -172,13 +178,13 @@ header {
 }
 
 .skill-btn {
+
   display: inline-block;
   padding: 10px 20px;
   background-color: #5A7080;
   color: #fff;
   font-weight: 500;
   border-radius: 30px;
-  cursor: default;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 

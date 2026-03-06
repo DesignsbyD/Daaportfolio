@@ -17,17 +17,21 @@ header {
 
 /* About Section */
 .about-section {
-    padding: 80px 0;
+    padding: 50px 0;
 }
 
 /* Heading */
 .about-heading {
     color: #ec8997;
     margin-bottom: 24px;
-    font-size: clamp(2rem, 5vw, 3rem);
+    font-size: clamp(5rem, 5vw, 3rem);
 }
 
 /* Text block */
+.about-btn {
+    padding-top: 40px;
+}
+
 .aboutText p {
     max-width: 60rem;
     margin-bottom: 1rem;
@@ -47,5 +51,139 @@ header {
     border-radius: 12px;   
     object-fit: cover; 
     display: block;
-    margin: 0 auto;        /* centers inside the column */
+    margin: 0px 0px 0px 250px;        /* centers inside the column */
+}
+
+/* Floating animation */
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-15px); } /* moves up 15px */
+  100% { transform: translateY(0px); }
+}
+
+/* Apply to headshot image */
+.about-photo {
+  width: 100%;        /* adjust as needed */
+  border-radius: 15px; /* optional rounded corners */
+  animation: float 4s ease-in-out infinite; /* slow float */
+  transition: transform 0.3s ease; /* optional smooth hover */
+}
+
+.about-photo:hover {
+  transform: scale(1.05);
+  animation-play-state: paused; /* stops floating on hover */
+}
+
+
+.experience-section {
+  max-width: 900px;
+  margin: 80px auto;
+  padding: 0 20px;
+}
+
+.experience-title {
+  font-size: 4rem;
+  margin-bottom: 40px;
+}
+
+/* Table container */
+.experience-table {
+  border-top: 1px solid #a1c181;
+}
+
+/* Each row */
+.experience-item {
+  border-bottom: 1px solid #a1c181;
+}
+
+/* Clickable header row */
+.experience-header {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 2fr 2fr 1fr;
+  padding: 25px 0;
+  background: none;
+  border: none;
+  text-align: left;
+  font-size: 1rem;
+  font-family: "Roboto", sans-serif;
+  color: #a1c181;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.experience-header:hover {
+  background:#003049;
+  color: #eff0f4;
+}
+
+/* Column styles */
+.exp-role {
+  font-weight: 600;
+  font-family: "Roboto", sans-serif;
+}
+
+.exp-company {
+  color: #003049;
+  font-family: "Roboto", sans-serif;
+}
+
+.exp-year {
+  text-align: right;
+  color: #003049;
+  font-family: "Roboto", sans-serif;
+}
+
+/* Collapsible content */
+.experience-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.35s ease;
+}
+
+.experience-content p {
+  padding-top: 10px;
+  padding-bottom: 20px;
+  line-height: 1.6;
+  font-size: 14px;
+}
+
+/* Active state */
+.experience-item.active .experience-content {
+  max-height: 200px;
+}
+
+/* About Skills Section */
+.about-skills {
+  padding: 60px 15px;
+  border-radius: 15px;
+}
+
+.skills-title {
+  font-size:4rem;
+  color: #003049;
+  margin-bottom: 15px;
+}
+
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.skill-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #5A7080;
+  color: #fff;
+  font-weight: 500;
+  border-radius: 30px;
+  cursor: default;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect for interactivity */
+.skill-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
 }

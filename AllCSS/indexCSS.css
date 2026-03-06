@@ -197,7 +197,7 @@ header{
 }
 
 #carouselSlides .carousel-item {
-     height: 550px; /* desktop height */
+     height: 650px; /* desktop height */
      transition: opacity 1.5s ease-in-out;
 
 }

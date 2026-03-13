@@ -74,6 +74,17 @@
   margin-top: 18px;
 }
 
+h2 {
+  font-family:"ephesis", serif;
+}
+
+.project-link{
+text-decoration: none;
+color: inherit;
+display:block;
+}
+
+
 /* Mobile refinement */
 @media (max-width: 768px) {
   .graphics-hero {
@@ -97,8 +108,14 @@
 .project-row {
   padding: 60px 0;
   border-bottom: 1px solid #003049;
+cursor: url("../CursorIcons/pointer.png"), pointer;
+transition: transform .35s ease;
 }
 
+.project-row:hover{
+transform: translateY(-6px);
+opacity: .9;
+}
 /* Last one without border */
 .project-row:last-of-type {
   border-bottom: none;
@@ -117,6 +134,7 @@
   filter: grayscale(100%);
   transform: scale(1.02);
   transition: filter 0.4s ease, transform 0.4s ease, box-shadow 0.4s ease;
+  cursor: url("../CursorIcons/pointer.png"), pointer;
 }
 
 /* Hover: color + slight zoom */
@@ -160,3 +178,4 @@
     order: 1;
   }
 }
+

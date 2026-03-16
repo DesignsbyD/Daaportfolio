@@ -89,7 +89,7 @@
           <ul>
             <li>Branding</li>
            <li>Typography</li>
-            <li>Packaging Design</li>
+            <li>Packaging</li>
           </ul>
         </div>
 
@@ -98,6 +98,7 @@
       <ul>
         <li>Illustrator</li>
         <li>InDesign</li>
+        <li>Mockup</li>
       </ul>
       </div>
 </div>
@@ -116,11 +117,10 @@
 
     <div class="col-md-8">
       <p data-aos="fade-up" data-aos-delay="100">
-        For my final project, I decided to embark on a perfume redesign within Maison Margiela’s Replica series. 
+        For my final project, I decided to embark on a <b> perfume redesign</b> within <i> Maison Margiela’s Replica series.</i>
         Inspired by the existing Replica Jazz Club perfume, I initially struggled with identifying areas for improvement due to 
         its well-crafted and modern design. However, through iterations and research, 
-        I developed an entirely new concept that encapsulates a feminine, romantic, and nostalgic atmosphere inspired by Havana’s vibrant
-         nightlife.
+        I developed an entirely new concept that encapsulates a <i> feminine, romantic, and nostalgic</i> atmosphere inspired by Havana’s vibrant nightlife.
       </p>
     </div>
 
@@ -139,13 +139,13 @@
     <div class="col-md-8">
       <p data-aos="fade-up" data-aos-delay="300">
         At the start of this project, <i> I assumed that my task was to redesign the original Jazz Club perfume. </i>
-        I remember thinking that the original packaging was already perfect, in the sense that through its minimalism it 
+        I remember thinking that the original packaging was <i> already perfect</i>, in the sense that through its minimalism it 
         captured the essence of the male audience it wanted to serve, despite being a unisex perfume. 
 I searched the Margiela Official to understand the marketing point of the product and how to translate it over to the redesign. 
       </p>
 
       <p data-aos="fade-up" data-aos-delay="400">
-        The Jazz Club perfume evokes the ambiance of a cozy basement bar in Brooklyn, filled with soft jazz melodies and a warm, smoky aroma. 
+        The Jazz Club perfume evokes the ambiance of a <b>cozy basement bar in Brooklyn </b>, filled with soft jazz melodies and a warm, smoky aroma. 
 With this in mind I went through many sketch iterations to captivate this alluring, strong, <b>masculine</b> sentiment 
 I got from the smell and look of the product. 
       </p>
@@ -312,6 +312,78 @@ I got from the smell and look of the product.
 
 </section> -->
 
+ <hr class="project-divider">
+
+<section class="more-projects-section">
+  <div class="container">
+    <div class="more-projects-header">
+      <h2 class="more-projects-title">Explore More Projects</h2>
+
+      <div class="more-projects-nav">
+        <button class="slider-arrow prev-arrow" aria-label="Previous projects">
+          &#8592;
+        </button>
+        <button class="slider-arrow next-arrow" aria-label="Next projects">
+          &#8594;
+        </button>
+      </div>
+    </div>
+
+    <div class="projects-slider" id="projectsSlider">
+
+      <a href="../GraphicsPages/MATTO.html" class="project-card-slide">
+        <div class="project-card-image-wrap">
+          <img src="../Final images/MATTO/MATTO Bauhaus cup.jpg" alt="MATTO project preview">
+        </div>
+        <div class="project-card-copy">
+          <p class="project-card-tag">Branding · Campaign</p>
+          <h3>MATTO Wake Up Meal</h3>
+        </div>
+      </a>
+
+      <a href="../GraphicsPages/Postcards.html" class="project-card-slide">
+        <div class="project-card-image-wrap">
+          <img src="../Final images/Postcard/All Postcards Mockup 1C & 2C Blue BG.jpg" alt="Postcards project preview">
+        </div>
+        <div class="project-card-copy">
+          <p class="project-card-tag">Print · Illustration</p>
+          <h3>Travel Postcards</h3>
+        </div>
+      </a>
+
+      <a href="../GraphicsPages/MoMA.html" class="project-card-slide">
+        <div class="project-card-image-wrap">
+          <img src="../Final images/MoMA Design Article/Moma Article mockup.jpg" alt="MoMA project preview">
+        </div>
+        <div class="project-card-copy">
+          <p class="project-card-tag">Editorial</p>
+          <h3>MoMA Design Article</h3>
+        </div>
+      </a>
+
+      <a href="../GraphicsPages/Massimo.html" class="project-card-slide">
+        <div class="project-card-image-wrap">
+          <img src="../Final images/Massimo Publication/Massimo MockupFinished.jpg" alt="Massimo project preview">
+        </div>
+        <div class="project-card-copy">
+          <p class="project-card-tag">Publication Design</p>
+          <h3>Massimo Publication</h3>
+        </div>
+      </a>
+
+      <a href="../GraphicsPages/FilmNoir.html" class="project-card-slide">
+        <div class="project-card-image-wrap">
+          <img src="../Final images/Film Noir/Asphalt Jungle Monroe, Marilyn.jpg" alt="Film Noir project preview">
+        </div>
+        <div class="project-card-copy">
+          <p class="project-card-tag">Event Design</p>
+          <h3>Film Noir Invitation</h3>
+        </div>
+      </a>
+
+    </div>
+  </div>
+</section>
 <!--footer-->
     <footer class="footer container-fluid">
     <div class="row align-items-center">
@@ -341,6 +413,34 @@ I got from the smell and look of the product.
 <!-- Initalize Animation AOS -->
 <script>
   AOS.init();
+</script>
+
+<!-- Bottom Slider -->
+<script>
+  const projectsSlider = document.getElementById("projectsSlider");
+  const prevArrow = document.querySelector(".prev-arrow");
+  const nextArrow = document.querySelector(".next-arrow");
+
+  const getScrollAmount = () => {
+    const card = document.querySelector(".project-card-slide");
+    if (!card) return 350;
+    const gap = 24;
+    return card.offsetWidth + gap;
+  };
+
+  nextArrow.addEventListener("click", () => {
+    projectsSlider.scrollBy({
+      left: getScrollAmount(),
+      behavior: "smooth"
+    });
+  });
+
+  prevArrow.addEventListener("click", () => {
+    projectsSlider.scrollBy({
+      left: -getScrollAmount(),
+      behavior: "smooth"
+    });
+  });
 </script>
 </body>
 

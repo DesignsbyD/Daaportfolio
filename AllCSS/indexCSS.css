@@ -1,6 +1,10 @@
 /* Hero section */
 header{
-  margin-top: -50px;
+    width:100%;
+    text-align: center;
+    height: calc(100vh - 100px); /* subtract navbar height */
+    border-bottom: 2px solid #a1c181;
+    padding: 0; /* important */
 }
 .hero {
   padding-top: 80px;
@@ -9,8 +13,12 @@ header{
 
 /* Text column */
 .hero-text {
-  max-width: 540px;
-  margin-left: 50px;
+  height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 
 /* Name */
@@ -41,12 +49,6 @@ header{
   opacity: 0.85;
 }
 
-/* Image column */
-.hero-image {
-  display: flex;
-  justify-content: right;
-
-}
 
 /* Image styling */
 .hero-image img {

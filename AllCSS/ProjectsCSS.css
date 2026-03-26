@@ -44,6 +44,9 @@ margin-top:80px;
 margin-bottom:80px;
 }
 
+.row {
+  margin-top: 4rem;
+}
 
 /* HEADINGS */
 
@@ -224,4 +227,66 @@ transform:scale(1.02);
     width: 46px;
     height: 46px;
   }
+}
+
+/* Massimo colors */
+
+.color-system{
+margin:30px 0;
+}
+
+
+.color-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit, minmax(180px,1fr));
+gap:20px;
+}
+
+/* card */
+
+.color-card{
+cursor:pointer;
+border-radius:14px;
+overflow:hidden;
+transition:transform .3s ease, box-shadow .3s ease;
+}
+
+.color-card:hover{
+transform:translateY(-6px);
+box-shadow:0 10px 25px rgba(0,0,0,0.1);
+}
+
+/* swatch */
+
+.color-swatch{
+height:140px;
+width:100%;
+}
+
+/* hex code */
+
+.color-code{
+text-align:center;
+padding:12px;
+font-weight:500;
+letter-spacing:1px;
+background:#fff;
+margin:0;
+transition:all .3s ease;
+}
+
+/* hover effect */
+
+.color-card:hover .color-code{
+background:#003049;
+color:#fff;
+}
+
+/* copy feedback */
+
+.copy-feedback{
+margin-top:20px;
+font-size:0.9rem;
+color:#666;
+height:20px;
 }

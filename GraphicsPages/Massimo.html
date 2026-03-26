@@ -143,15 +143,65 @@
 
     <div class="col-md-8">
       <p data-aos="fade-up" data-aos-delay="100">
-       I started by conducted research on Vignelli’s life, philosophy, and two of his most iconic works: the 1972 NYC Subway Map and the American Airlines logo redesign.
+       I started by researching on Vignelli’s life, philosophy, and two of his most iconic works: the 1972 NYC Subway Map and the American Airlines logo redesign.
+      Vignelli's style can best be summarized by the following quote:
       </p>
 
-      <p data-aos="fade-up" data-aos-delay="200">
-       In my researched I noted how his minimalist approach revolutionized branding which influenced my final design.
+<p data-aos="fade-up" data-aos-delay="200" style="padding: 80px 0px;">
+      <q style="color: #EC8997; font-size: xx-large;"><i>Design is not art. Design is utilitarian, art is not.</i></q>
       </p>
 
+      <div class="row">
+        <div class="col-md-8">
+          <img src="../SKETCHES/Massimo Publication/Massimo Map redesign.jpg" class="img-fluid gallery-img" data-aos="zoom-in-up" data-aos-delay="100"> 
+        </div>
+
+        <div class="col-md-4">
+          <img src="../SKETCHES/Massimo Publication/American-Airlines-Logo-PNG.png" class="img-fluid gallery-img" data-aos="zoom-in-up" data-aos-delay="100">
+        </div>
+      </div>
+
+      <div class="row">
+        <p>
+          Considering his lengendary MTA Design, I drew inspiration from his simplified version of the MTA map. In my first sketches, I considered the colors, layout, and fonts I wanted to use for my editorial.
+          Selected fonts that mirrored his preference for sans-serif typefaces like <b>Helvetica</b>. I implemented <b>color choices</b> inspired by the NYC subway lines, bringing a subtle but meaningful nod to his work.
+          I also integrated high-resolution, CMYK-processed images, including a portrait of Vignelli, his subway map, and the American Airlines logo.
+
+        </p>
+        <section class="color-system">
+
+  <div class="color-grid">
+
+    <div class="color-card" data-color="#9A38A1">
+      <div class="color-swatch" style="background:#9A38A1;"></div>
+      <p class="color-code">#9A38A1</p>
+    </div>
+
+    <div class="color-card" data-color="#D82233">
+      <div class="color-swatch" style="background:#D82233;"></div>
+      <p class="color-code">#D82233</p>
+    </div>
+
+    <div class="color-card" data-color="#EB6800">
+      <div class="color-swatch" style="background:#EB6800;"></div>
+      <p class="color-code">#EB6800</p>
+    </div>
+
+    <div class="color-card" data-color="#0062CF">
+      <div class="color-swatch" style="background:#0062CF;"></div>
+      <p class="color-code">#0062CF</p>
+    </div>
+
+  </div>
+
+  <p class="copy-feedback" id="copyMessage"></p>
+</section>
+      </div>
+
+    </div>
     </div>  
-     <div class="row g-4" style="padding: 80px 0px;">
+
+     <div class="row g-4">
 
     <div class="col-md-4">
       <img src="../SKETCHES/Massimo Publication/Art 3058 Publication Sketch 1.jpg" class="img-fluid gallery-img" data-aos="zoom-in-up" data-aos-delay="100">
@@ -167,7 +217,7 @@
 
   </div>
 
-  </div>
+  
 
   </section>
 
@@ -415,6 +465,25 @@
 <!-- Script for Animation AOS -->
 
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+<script>
+const colorCards = document.querySelectorAll(".color-card");
+const copyMessage = document.getElementById("copyMessage");
+
+colorCards.forEach(card => {
+  card.addEventListener("click", () => {
+    const color = card.getAttribute("data-color");
+
+    navigator.clipboard.writeText(color);
+
+    copyMessage.textContent = color + " copied to clipboard ✓";
+
+    setTimeout(() => {
+      copyMessage.textContent = "";
+    }, 2000);
+  });
+});
+</script>
 
 <!-- Initalize Animation AOS -->
 <script>

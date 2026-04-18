@@ -86,6 +86,55 @@ transition:transform .3s ease;
 transform:scale(1.02);
 }
 
+/* IMAGE CAPTIONS */
+.image-hover-wrapper {
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+/* Image */
+.image-hover-wrapper img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+/* Caption overlay */
+.image-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+
+  background: rgba(0, 48, 73, 0.75); /* your dark blue w/ opacity */
+  color: #eff0f4;
+  
+  padding: 1rem;
+  font-family: "Roboto", sans-serif;
+  font-size: 0.95rem;
+  line-height: 1.4;
+
+  opacity: 0;
+  transform: translateY(100%);
+  transition: all 0.4s ease;
+}
+
+/* Hover effects */
+.image-hover-wrapper:hover img {
+  transform: scale(1.03); /* subtle zoom */
+}
+
+.image-hover-wrapper:hover .image-caption {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+/* View More */
+
 .project-divider{
   margin: 120px auto 80px;
   border: 0;
